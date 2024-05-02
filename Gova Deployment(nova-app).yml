@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: govadeployment
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+   app: govapp
+ template:
+  metadata:
+   labels:
+    app: govapp
+  spec:
+   containers:
+   - name: govacontainer
+     image: nginx
+     ports:
+     - containerPort: 80
