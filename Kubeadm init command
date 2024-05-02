@@ -1,0 +1,1 @@
+sudo kubeadm init --apiserver-advertise-address=172.31.35.242 --pod-network-cidr=10.244.0.0/16
