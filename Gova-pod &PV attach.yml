@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gova-pod
+  labels:
+    app: govapp
+spec:
+  containers:
+  - name: gova-container
+    image: nginx
+    volumeMounts:
+    - name: gova-pv
+      mountPath: "/mnt/data"
+  volumes:
+  - name: gova-pv
+    persistentVolumeClaim:
+      claimName: gova-pvclaim
