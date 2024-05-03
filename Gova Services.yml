@@ -4,7 +4,7 @@ metadata:
  name: govaservice
 spec:
  selector:
-  app: govaapp
+   app: govaapp
  type: NodePort
  ports:
  - protocol: "TCP"
